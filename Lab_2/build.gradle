@@ -1,0 +1,11 @@
+plugins {
+    id 'application'
+}
+
+application {
+    mainClass = 'lab_2.task.App'
+}
+
+repositories {
+    mavenCentral()
+}
