@@ -3,12 +3,25 @@
  */
 package lab_2.task;
 
-public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+import java.util.Scanner;
 
+public class App {
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter a string:");
+        String inputStr = in.nextLine();
+        in.close();
+
+        System.out.println("You've printed following string: " + inputStr);
+
+        // Пример использования countWords
+        StringBuilder text = new StringBuilder(inputStr);
+        StringBuilder searchWords = new StringBuilder("Hello world test");
+        System.out.println("\nWord occurrences:");
+        StringOperation.countWords(text, searchWords);
+
+        // Пример использования switchFirstLastWord
+        System.out.println("\nSwitch first and last word:");
+        StringOperation.switchFirstLastWord(text);
     }
 }
