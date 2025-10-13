@@ -4,11 +4,52 @@
 package lab_4.task;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
-
+    /**
+     * Main executable method.
+     * Demonstrates usage of Letter, Word, Punctuation, Sentence, Text classes.
+     * @param args command line arguments
+     */
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        String input = "Hello,   world!  This\tis a   test. How are you?   \ttest";
+        Text text = new Text(input);
+
+        System.out.println("Normalized text:");
+        System.out.println(text);
+
+        System.out.println("\nSentences:");
+        for (Sentence s : text.getSentences()) {
+            System.out.println(s);
+        }
+
+        System.out.println("\nWords in first sentence:");
+        if (!text.getSentences().isEmpty()) {
+            for (Word w : text.getSentences().get(0).getWords()) {
+                System.out.println(w);
+            }
+        }
+
+        System.out.println("\nPunctuations in first sentence:");
+        if (!text.getSentences().isEmpty()) {
+            for (Punctuation p : text.getSentences().get(0).getPunctuations()) {
+                System.out.println(p);
+            }
+        }
+
+        // ЛР2: Подсчитать количество слов
+        int wordCount = StringClass.countWords(text);
+        System.out.println("\nWord count: " + wordCount);
+
+        // ЛР2: Поменять первое и последнее слово в первом предложении
+        String switched = StringClass.switchFirstLastWord(text);
+        System.out.println("\nFirst sentence after switching first and last word:");
+        System.out.println(switched);
+
+        // Подсчитать количество встреч каждого слова
+        System.out.println("\nWord occurrences:");
+        java.util.List<Word> searchWords = new java.util.ArrayList<>();
+        searchWords.add(new Word("Hello"));
+        searchWords.add(new Word("world"));
+        searchWords.add(new Word("test"));
+        StringClass.countWords(text, searchWords);
     }
 }
