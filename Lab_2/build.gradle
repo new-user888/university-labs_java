@@ -6,6 +6,10 @@ application {
     mainClass = 'lab_2.task.App'
 }
 
+run {
+    standardInput = System.in
+}
+
 repositories {
     mavenCentral()
 }
