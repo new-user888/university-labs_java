@@ -8,7 +8,7 @@ import java.lang.StringBuilder;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class StringOperationTest {
+public class StringOperationTest {
 
     @Test
     void testSplitStringBuilder_MultipleDelimiters() {
