@@ -133,8 +133,8 @@ Reusing configuration cache.
 
 > Task :Lab_2:run
 Enter a string:
-<<=====<===<=======<=========----> 75% EXECUTING [11s]
-You've printed following string: Hello, I am the one
+75% EXECUTING [11s]
+You ve printed following string: Hello, I am the one
 
 Word occurrences:
 Hello: 1
