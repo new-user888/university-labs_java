@@ -76,7 +76,7 @@ BUILD SUCCESSFUL in 1s
 
 </details>
 
-<details>./gradlew build (contains all the builds)<summary></summary>
+<details><summary>./gradlew build (contains all the builds)</summary>
 
 ```sh
 > ./gradlew build
